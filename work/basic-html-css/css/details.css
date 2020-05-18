@@ -1,0 +1,22 @@
+html{
+    font-style:  sans-serif ;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: cornflowerblue;
+    height: 100px;
+}
+form{
+    font-size: large;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    background-color: cornflowerblue;
+}
+

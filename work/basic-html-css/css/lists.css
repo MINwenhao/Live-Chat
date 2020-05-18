@@ -1,0 +1,13 @@
+html{
+    font-style:  sans-serif ;
+}
+li {
+    border :  1px solid green;
+    font-style:  sans-serif ;
+}
+li:nth-child(2n+1){ 
+    background-color: rgb(185, 16, 87);
+}
+li:nth-child(2n){
+    background-color: antiquewhite;
+}
