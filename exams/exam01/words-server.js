@@ -8,16 +8,18 @@ function load(words,selectWord){
         <html>
             <head>
                 <meta charset="utf-8">
+                
                 <title> guess words</title>
+                <link rel="stylesheet" href="words.css" />
             </head>
 
             <body>
             <h1>guess words</h1>
             <p> select a word from the list </p>
-            ${wordServer.getWords(words,selectWord)};
+            ${wordServer.getWords(words,selectWord)}
             
             <div class="form"> 
-            ${wordServer.getMessages(selectWord)};
+            ${wordServer.getMessages(selectWord)}
             </div>
 
             <div class="resultParas">
@@ -34,9 +36,9 @@ function load(words,selectWord){
         messages.selectWord= current;
         messages.words=words.wordsList;
         
-        return`<span class="username"> ${words.wordsList} </span>
+        return`<span class="wordsList"> ${words.wordsList} </span>
         `; 
-    };
+    }
 
   function getMessages (){
     return `<ol class="messages">
@@ -70,7 +72,7 @@ function load(words,selectWord){
    </div>
     `;
         
-    };
+    }
 
         
   
@@ -83,12 +85,14 @@ function load(words,selectWord){
         
         if(!messages.words.includes(guessField)){
             messages.alert='Your word is Invalid ';
-            
+            return``;
         }
 
         if(guessField===selectWord1){
             messages.alert='Your Guessed Correctly!';
+            return ``;
         }
+        messages.alert='';
         messages.count++;
         messages.guess+=guessField+", ";
         messages.listOfValid="";
@@ -107,10 +111,7 @@ function load(words,selectWord){
               }
               j++;
             }
-            
         }
-        
-
   };
   let messages={
       text:"",
@@ -132,5 +133,5 @@ const wordServer={
     messages,
     
     
-};
+}
 module.exports=wordServer;

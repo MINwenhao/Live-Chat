@@ -1,0 +1,26 @@
+
+
+h1{
+    font-size: 200%;
+    color:brown;
+}
+.wordsList{
+    display: flex;
+  flex-direction: column;
+  
+}
+.messages{
+    background-color: darkorange;
+}
+
+.to-send{
+    background-color: green;
+}
+.alert{
+    background-color: red;
+}
+.outgoing{
+    background-color: brown;
+
+}
+

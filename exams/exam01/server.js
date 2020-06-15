@@ -8,6 +8,9 @@ const wordServer=require('./words-server');
 
 const selectWord=words.wordsList[Math.floor(Math.random()*words.wordsList.length+1)];
 console.log(selectWord);
+
+app.use(express.static('./public'));
+
 app.get('/', (req, res) => {
     res.send(wordServer.load(words,selectWord));
   });
